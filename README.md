@@ -1,16 +1,16 @@
 # css-dts
 
-Create from `*.css` css files `d.ts` typescript definition file
+Create from css files typescript definition file
 
-It be useful for webpack css-modules https://github.com/webpack/css-loader with typescript
+It be useful for webpack css-modules https://github.com/webpack/css-loader https://github.com/css-modules/css-modules#css-modules with typescript
 
 
 ## Install
 `npm i -g css-dts`
 
 ## How to use
-```
-//foo.css
+`css-dts foo.css`
+```css
 .foo {
     color: red;
 }
@@ -20,7 +20,7 @@ It be useful for webpack css-modules https://github.com/webpack/css-loader with 
 }
 ```
 Will generate `foo.css.d.ts`
-```
+```typescript
 export const locals: {
     foo: string
     bar: string
@@ -28,7 +28,7 @@ export const locals: {
 ```
 
 Now you can get classes names from ts files
-```
+```typescript
 import {locals} from './foo.css'
 export class Foo extends React.Component<{}, {}>{
    render(){
