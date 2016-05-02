@@ -14,7 +14,7 @@ var options = {
 };
 
 var file = process.argv[2];
-if (file.match(/-loc.css$/)) {
+if (file.match(/\.css$/)) {
     var fileData = fs.readFileSync(file).toString();
     var filedTs = file + '.d.ts';
     processCss(fileData, null, options, (err, result)=> {

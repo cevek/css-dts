@@ -1,6 +1,6 @@
 {
   "name": "css-dts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "css-dts": "./bin/css-dts.js"
   },
