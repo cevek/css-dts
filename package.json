@@ -1,15 +1,20 @@
 {
   "name": "css-dts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "css-dts": "./bin/css-dts.js"
   },
   "description": "Create *.css.d.ts files from *-loc.css",
   "main": "index.js",
-  "keywords": ["css", "d.ts", "typescript"],
+  "keywords": [
+    "css",
+    "d.ts",
+    "typescript"
+  ],
   "author": "cevek",
   "license": "ISC",
   "dependencies": {
-    "css-loader": "^0.23.1"
+    "css-loader": "^0.23.1",
+    "lodash.camelcase": "^4.1.1"
   }
 }
