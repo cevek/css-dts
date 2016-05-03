@@ -15,7 +15,7 @@ It be useful for webpack css-modules https://github.com/webpack/css-loader https
     color: red;
 }
 
-.bar {
+.foo-bar {
     color: green;
 }
 ```
@@ -23,7 +23,7 @@ Will generate `foo.css.d.ts`
 ```typescript
 export const locals: {
     foo: string
-    bar: string
+    fooBar: string
 }
 ```
 
