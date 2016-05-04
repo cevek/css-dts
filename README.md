@@ -21,18 +21,16 @@ It be useful for webpack css-modules https://github.com/webpack/css-loader https
 ```
 Will generate `foo.css.d.ts`
 ```typescript
-export const locals: {
-    foo: string
-    fooBar: string
-}
+export let foo:''
+export let fooBar:''
 ```
 
 Now you can get classes names from ts files
 ```typescript
-import {locals} from './foo.css'
+import * as style from './foo.css'
 export class Foo extends React.Component<{}, {}>{
    render(){
-      return <div className={locals.foo}>Foo</div>
+      return <div className={style.foo}>Foo</div>
    }
 }
 ```

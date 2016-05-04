@@ -25,7 +25,7 @@ if (file && file.match(/\.css$/)) {
             throw err;
         }
         const keys = Object.keys(result.exports).map(camelCase);
-        const newData = `export const locals: {\n\t${keys.map(key => `${key}: string`).join('\n\t')}\n}`;
+        const newData = keys.map(key => `export let ${key}:''`).join('\n');
         fs.writeFileSync(filedTs, newData);
     });
 } else {
